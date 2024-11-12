@@ -1,0 +1,14 @@
+{
+  "users": [
+    { "full name": "john doe",
+      "email": "user@example.com",
+      "password": "userpassword"
+    },
+    {
+      "fullname": "Eniola Solomon Talabi",
+      "email": "eniola.talabi@aol.com",
+      "password": "hhahyuayuyuy00854"
+    },
+    {"ADMIN LOG-IN" : "admin@travelsmart.com and AdminPass123"}
+  ]
+}

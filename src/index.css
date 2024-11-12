@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+.text-red-500 {
+  color: #f56565;
+}
+.text-yellow-500 {
+  color: #ecc94b;
+}
+.text-green-500 {
+  color: #48bb78;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px var(--primary-light), 0 0 10px var(--primary-light), 0 0 15px var(--primary-light);
+  }
+  50% {
+    box-shadow: 0 0 15px var(--primary-light), 0 0 20px var(--primary-light), 0 0 25px var(--primary-light);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--primary-light), 0 0 10px var(--primary-light), 0 0 15px var(--primary-light);
+  }
+}
+
+.glow-border {
+  border: 2px solid var(--primary);
+  animation: glow 1.5s infinite ease-in-out;
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Applying the animation to Welcome Back text */
+.animate-slideIn {
+  animation: slideIn 1s ease-out;
+}
+
+/* Card border style */
+.card {
+  border: 2px solid #0F7A9E; /* Custom color for the border */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Border glow animation */
+@keyframes border-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  25% {
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+  }
+  75% {
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Applying the animation to the card */
+.card-glow {
+  animation: border-glow 2s infinite;
+}
+
+
+#keepMeSignedIn{
+  accent-color: #0A4F69;
+}
+
+@media (max-width: 768px) {
+  .mobile-center {
+    text-align: center;
+  }
+}
+
+/* Button Glow Animation */
+.glow-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-border::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  z-index: 0;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Adjust border color */
+  border-radius: inherit;
+  animation: glow-animation 2s infinite alternate;
+}
+
+@keyframes glow-animation {
+  0% {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+}
+
+
+@keyframes placeholderAnimation {
+  from {
+    width: 0;
+    overflow: hidden;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate-placeholder::placeholder {
+  animation: placeholderAnimation 10s steps(30, end) forwards;
+  white-space: nowrap;
+  overflow: hidden;
+}
